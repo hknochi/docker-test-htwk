@@ -10,6 +10,7 @@ RUN apt-get install -y supervisor
 
 EXPOSE 3306
 
+VOLUME ["/var/lib/mysql"]
 
 ADD supervisor.conf /etc/supervisor/conf.d/supervisor.conf
 CMD ["/usr/bin/supervisord"]
